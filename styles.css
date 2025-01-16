@@ -14,10 +14,10 @@ body {
 
 .container {
     max-width: 800px;
-    background: rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 0.205);
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 100px 100px rgba(0, 0, 0, 0.418);
+    box-shadow: 30px 30px 20000px rgba(255, 237, 237, 0.74);
     position: relative;
     animation: pop-in 0.8s ease-out;
 }
@@ -44,11 +44,11 @@ body {
 }
 
 @keyframes color-shift {
-    0% { color: #ff6347; }
-    25% { color: #ffeb3b; }
-    50% { color: #4caf50; }
-    75% { color: #2196f3; }
-    100% { color: #ff6347; }
+    0% { color: #ff2600; }
+    25% { color: #ffff00; }
+    50% { color: #00ff00; }
+    75% { color: #00e1ff; }
+    100% { color: #d7ff47; }
 }
 
 .error-image {
@@ -83,6 +83,7 @@ body {
 .whatsapp-button:hover {
     background-color: #1da851;
     transform: scale(1.1);
+    color: silver
 }
 
 /* Enlace de regreso */
