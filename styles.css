@@ -1,51 +1,91 @@
+/* Estilos básicos */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(120deg, #d3008d, #0026ff);
-    color: #444;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #ffff00, #ff0000);
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
     text-align: center;
 }
 
 .container {
-    max-width: 600px;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0);
     padding: 20px;
-    background: #fff;
     border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 100px 100px rgba(0, 0, 0, 0.418);
+    position: relative;
+    animation: pop-in 0.8s ease-out;
 }
 
-h1 {
+/* Animaciones */
+@keyframes pop-in {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes color-shift {
+    0% { color: #ff6347; }
+    25% { color: #ffeb3b; }
+    50% { color: #4caf50; }
+    75% { color: #2196f3; }
+    100% { color: #ff6347; }
+}
+
+.error-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    animation: float 3s infinite ease-in-out;
+}
+
+.animated-title {
     font-size: 3rem;
-    color: #ff2600;
+    animation: color-shift 5s infinite;
 }
 
-p {
+.animated-text {
     font-size: 1.2rem;
-    margin: 10px 0;
+    animation: float 3s infinite ease-in-out alternate;
 }
 
+/* Botón de WhatsApp */
 .whatsapp-button {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
+    padding: 12px 20px;
     font-size: 1.2rem;
     color: #fff;
     background-color: #25D366;
-    border: none;
     border-radius: 8px;
     text-decoration: none;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
 }
 
 .whatsapp-button:hover {
     background-color: #1da851;
+    transform: scale(1.1);
 }
 
+/* Enlace de regreso */
 .home-link a {
     display: inline-block;
     margin-top: 20px;
@@ -57,4 +97,5 @@ p {
 
 .home-link a:hover {
     color: #ff6347;
+    text-decoration: underline;
 }
